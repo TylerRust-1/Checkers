@@ -97,16 +97,16 @@
 }
 
 .square.player1 {
-  background-image: url("img/red-pawn.png");
+  background-image: url("images/red-checker.png");
 }
 .square.player2 {
-  background-image: url("img/blue-pawn.png");
+  background-image: url("images/black-checker.png");
 }
 .square.player1.king {
-  background-image: url("img/red-king.png");
+  background-image: url("images/red-king.png");
 }
 .square.player2.king {
-  background-image: url("img/blue-king.png");
+  background-image: url("images/black-king.png");
 }
 
 @media only screen and (max-width: 700px) {

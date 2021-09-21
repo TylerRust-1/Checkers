@@ -1,6 +1,6 @@
 import React from 'react';
-import {returnPlayerName} from './utils.js';
-import {ReactCheckers} from './ReactCheckers.js';
+import {returnPlayerName} from './helpers.js';
+import {ReactCheckers} from './checkers.js';
 import Board from './board.js';
 import { Router } from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
