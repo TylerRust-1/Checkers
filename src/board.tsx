@@ -1,11 +1,10 @@
 import React from 'react';
+import { checkers } from './checkers.js';
 import * as utils from './helpers.js';
 
-function Square(props) {
-
+function Square(props:) {
     const squareClasses = props['squareClasses'];
     const onClick = props['onClick'];
-
     return (
         <button className = { "square " + (squareClasses) } onClick={onClick} />
     );

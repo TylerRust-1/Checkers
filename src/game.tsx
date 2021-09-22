@@ -324,7 +324,7 @@ export class Game extends React.Component {
                             activePiece = {activePiece}
                             moves = {moves}
                             columns = {columns}
-                            onClick = {(coordinates) => this.handleClick(coordinates)}
+                            onClick = {(coordinates:string) => this.handleClick(coordinates)}
                         />
                     </div>
                     <div className="time-travel">
