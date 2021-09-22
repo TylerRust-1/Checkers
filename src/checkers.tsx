@@ -1,12 +1,11 @@
 import * as utils from './helpers.js';
 
-export class ReactCheckers {
-
-    constructor(columns) {
+export class checkers {
+    constructor(columns:number) {
         this.columns = columns;
     }
 
-    getCorners(coordinates) {
+    getCorners(coordinates:string) {
 
         const col = utils.getColAsInt(this.columns, coordinates);
         const row = utils.getRowAsInt(coordinates);
@@ -27,7 +26,7 @@ export class ReactCheckers {
         return corners;
     }
 
-    getMoves(boardState, coordinates, isKing = false, hasJumped = false) {
+    getMoves(boardState, coordinates:string, isKing = false, hasJumped = false) {
 
         if (boardState[coordinates] === null) {
             return [];
@@ -94,7 +93,7 @@ export class ReactCheckers {
 
     }
 
-    movePiece(coordinates, state) {
+    movePiece(coordinates:string , state) {
         let currentState  = Object.assign({}, state.history[state.stepNumber]);
         let boardState = Object.assign({}, currentState.boardState);
         let movingPiece = Object.assign({}, boardState[state.activePiece]);
@@ -126,7 +125,7 @@ export class ReactCheckers {
         // Remove opponent piece if jump is made
         const player = movingPiece.player;
         let hasJumped = null;
-        let newMoves = [];
+        let newMoves: [] = [];
         let setCurrentPlayer = player === 'player2';
         let setActivePiece = null;
 

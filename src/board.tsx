@@ -1,5 +1,5 @@
 import React from 'react';
-import * as utils from './utils.js';
+import * as utils from './helpers.js';
 
 function Square(props) {
 
@@ -13,7 +13,7 @@ function Square(props) {
 
 export default class Board extends React.Component {
 
-    renderSquare(coordinates, squareClasses) {
+    renderSquare(coordinates:string, squareClasses) {
         return (
             <Square
                 key = {coordinates}

@@ -1,6 +1,6 @@
 import React from 'react';
 import {returnPlayerName} from './helpers.js';
-import {ReactCheckers} from './checkers.js';
+import {checkers} from './checkers.js';
 import Board from './board.js';
 import { Router } from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
@@ -9,13 +9,12 @@ import {Opponent} from './Opponent.js';
 const browserHistory = createBrowserHistory();
 
 export class Game extends React.Component {
-
     constructor(props) {
         super(props);
 
         this.columns = this.setColumns();
 
-        this.ReactCheckers = new ReactCheckers(this.columns);
+        this.checkers = new checkers(this.columns);
         this.Opponent = new Opponent(this.columns);
 
         this.state = {
@@ -84,7 +83,7 @@ export class Game extends React.Component {
         return board;
     }
 
-    createPiece(location, player) {
+    createPiece(location:string , player: string) {
         let piece = {};
 
         piece.player   = player;
@@ -99,7 +98,7 @@ export class Game extends React.Component {
         return history[history.length - 1];
     }
 
-    handleClick(coordinates) {
+    handleClick(coordinates:string) {
 
         if (this.state.winner !== null) {
             return;
